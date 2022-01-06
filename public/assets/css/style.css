@@ -1,0 +1,157 @@
+html {
+	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+:root {
+	--main-width: calc(0.8 * 100%);
+	--main-height: calc(0.8 * 100%);
+	--log-height: calc(0.2 * 100%);
+	--aside-width: calc(0.2 * 100%);
+	--gap: 24px;
+	--border: 2px;
+	--height: calc(100vh);
+	--width: calc(100vw);
+	--green: #008615;
+	--red: #5e0b0b;
+	--dark: #131313;
+	--soft-dark: #1d1e1f;
+	--blue: #e2e2e2;
+	--dark-blue: #373333;
+	--white: #f5f5f5;
+}
+
+
+.container {
+	max-width: var(--width);
+	max-height: var(--height);
+}
+
+.container, .card {
+	display: flex;
+	flex-direction: row;
+}
+
+.menu-container, .card-container {
+	padding: 2rem
+}
+
+.text {
+	padding: .3rem;
+}
+
+.menu {
+	min-width: var(--aside-width);
+	min-height: var(--height);
+	background-color: var(--dark);
+}
+
+.menu > * {
+	color: var(--white);
+}
+
+.menu .text {	
+	font-size: 1.5rem;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #002987;
+	box-shadow: 0px 1px 5px #212020;
+}
+
+.menu .selector {
+	margin-top: var(--gap);
+	display: flex;
+	gap: .5rem;
+	flex-direction: column;
+	padding: 0 2rem;
+}
+
+
+.main {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--soft-dark);
+	width: var(--main-width);
+	overflow-y: hidden;
+	box-shadow: inset 1px 0px 1px rgb(26, 26, 26);
+}
+
+
+.card-container {
+	flex-grow: 1;
+}
+.cards {	
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;	
+	gap: 2rem;
+}
+
+.card-item {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+	width: 200px;
+	min-height: 220px;
+	border-radius: 5px;
+	padding: 1rem;
+	background-color: #020040;
+	outline-style: solid;
+	outline-color: var(--white);
+	outline-width: 2px;
+	color: var(--white);
+}
+
+.vm-name {
+	text-align: center;
+	border-radius: 5px;
+	background-color: var(--blue);
+	color: var(--soft-dark);
+	font-weight: 600;
+}
+
+.info {
+	margin: 1rem 0;
+	padding: .4rem;
+}
+
+.info * {
+	font-size: 14px;
+}
+
+.info div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn-control {
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	color: var(--white);
+	border-radius: 5px;
+	width: 50px;
+	padding: .25rem;
+	background-color: var(--green);
+}
+
+.log {
+	height: var(--log-height);
+	background-color: white;
+}
+
+.log :first-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: .2rem;
+	color: var(--white);
+	background-color: rgb(116, 116, 116);
+}
